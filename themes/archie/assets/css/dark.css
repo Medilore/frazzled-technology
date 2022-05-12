@@ -1,6 +1,8 @@
 body {
-  color: white;
-  background-color: #202124;
+  /* color: white; */
+  color: #EDEDED;
+  /* background-color: #202124; */
+  background-color: #171717;
 }
 
 ::-moz-selection {
@@ -10,19 +12,21 @@ body {
 }
 
 ::selection {
-  background: red;
-  color: #fff;
-  text-shadow: none;
+  /* background: red; */
+  /* color: #fff;
+  text-shadow: none; */
 }
 
 hr {
   border-top: 3px dotted blue;
 }
 code {
-  background-color: lightblue;
-  color: black;
-  text-decoration: bold;
-  padding: 0.1em 0.2em;
+  /* background-color: lightblue; */
+  background-color: #5b5850;
+  /* color: black; */
+  font-weight: 700;
+  padding: 0.2em 0.3em;
+  margin: 0 0.3em
 }
 pre {
   background-color: #272822;

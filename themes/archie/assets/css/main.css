@@ -4,7 +4,8 @@
 --bordercl:rebeccapurple;
 --callouctcolor:dodgerblue;
 --hovercolor:navy;
---darkMaincolor: #50fa7b;
+/* --darkMaincolor: #50fa7b; */
+--darkMaincolor: #ffd97c;
 }
 html {
   color: #232333;
@@ -20,10 +21,10 @@ body{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-::selection {
+/* ::selection {
   background: var(--maincolor);
   color: #fff;
-}
+} */
 
 p {
   font-family: 'Fira Sans', sans-serif;
