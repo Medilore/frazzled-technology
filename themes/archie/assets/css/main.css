@@ -162,8 +162,11 @@ h6::before { color: var(--maincolor); content: '###### '; }
 
 /* Footer */
 footer {
+  position: sticky;
+  bottom: 0;
   display: flex;
   align-items: center;
+  justify-content: end;
   border-top: 0.4rem dotted var(--bordercl);
   padding: 2rem 0rem;
   margin-top: 2rem;
