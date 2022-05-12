@@ -130,6 +130,7 @@ pre code {
   max-width: 800px;
   padding: 0 1ch;
   word-wrap: break-word;
+
 }
 
 /* Header */
@@ -162,8 +163,6 @@ h6::before { color: var(--maincolor); content: '###### '; }
 
 /* Footer */
 footer {
-  position: sticky;
-  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: end;
