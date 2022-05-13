@@ -1,7 +1,7 @@
 ---
 title: "HugoでJS/CSSファイルをMinify, Bundleする"
 date: 2022-05-14T02:33:56+09:00
-draft: true
+draft: false
 ---
 
 Hugo で最低限のブログ機能を作り、後は最適化やなーって状態です。
