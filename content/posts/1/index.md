@@ -1,22 +1,21 @@
 ---
 title: "Hugoで静的サイトを構築"
+description: "急にブログをやりたくなってしまったので、ざざっと作りました。1日もかからず出来ちゃって、こんなんでいいの？って思った。テーマも豊富でお手軽！最高！"
 date: 2022-05-12T19:54:49+09:00
 draft: false
 ---
 
-n番煎じ
+急にブログをやりたくなってしまったので、ざざっと作りました。
 
-急にブログやりてーなーって衝動に駆られたので、作りました。
+1 日もかからず出来ちゃって、こんなんでいいの？って思った。テーマも豊富でお手軽！最高！
 
-初めてHugo触ったので初学者向けです。たぶん。
+## Hugo 導入
 
-## Hugo導入
+Windows 向けです。
 
-Windows向けです。
+1. [Hugo/release](https://github.com/gohugoio/hugo/releases)から対応 OS のバイナリダウンロード
 
-1. [Hugo/release](https://github.com/gohugoio/hugo/releases)から対応OSのバイナリダウンロード
-
-1. WindowsのPath通す
+1. Windows の Path 通す
 
 `hugo new MY_SITE_NAME`
 
@@ -26,18 +25,18 @@ Windows向けです。
 
 で実行。
 
-## theme導入
+## theme 導入
 
-[Hugo Themes](https://themes.gohugo.io/)から好きなthemeを選び、
-zipでダウンロードしてきて`/themes`にぶちこんで終わり。
+[Hugo Themes](https://themes.gohugo.io/)から好きな theme を選び、
+zip でダウンロードしてきて`/themes`にぶちこんで終わり。
 
-git cloneでも大丈夫
+git clone でも大丈夫
 
-## 自分用にconfigをいじる
+## 自分用に config をいじる
 
 `/config.toml`をいじる
 
-~~~toml
+```toml
 baseURL = 'https://Medilore.github.io/frazzled-technology/'
 DefaultContentLanguage = "ja"
 languageCode = "ja-jp"
@@ -50,17 +49,17 @@ Copyright = "frazzled-technology"
 
 [params]
 mode = "dark"
-~~~
+```
 
-このサイトのconfigはこんな感じ。必須なのは`baseURL, title, theme`ぐらい？全てのオプションは[All Configuration Settings](https://gohugo.io/getting-started/configuration/#all-configuration-settings)にある。
+このサイトの config はこんな感じ。必須なのは`baseURL, title, theme`ぐらい？全てのオプションは[All Configuration Settings](https://gohugo.io/getting-started/configuration/#all-configuration-settings)にある。
 
 ## 記事をつくる
 
 `hugo new post/HOGE.md`で記事作成。`/content/post/HOGE.md`に生成される。
 
-あとはmarkdownをガリガリ書くだけ
+あとは markdown をガリガリ書くだけ
 
-frontmatterをいじりたかったら`/archetypes/default.md`をいじろう。
+frontmatter をいじりたかったら`/archetypes/default.md`をいじろう。
 
 ## 公開
 
@@ -68,56 +67,56 @@ frontmatterをいじりたかったら`/archetypes/default.md`をいじろう。
 
 **が、**
 
-俺はgithub pagesで公開したかったので、ちょっと回り道をする。
+俺は github pages で公開したかったので、ちょっと回り道をする。
 
-### gh-pagesブランチを作成
+### gh-pages ブランチを作成
 
-github pagesを公開するにはgh-pagesブランチとかいうのが必要らしいので、作る
+github pages を公開するには gh-pages ブランチとかいうのが必要らしいので、作る
 
-~~~bash
+```bash
 git checkout --orphan gh-pages
 git clean -fdx && test $(git ls-files | wc -l) -eq 0 || git rm -rf .
 git commit -m "initial commit"
 git push origin gh-pages
-~~~
+```
 
-これで空のgh-pagesブランチが作成されるので、ここにpublicの中身をぶちまける
+これで空の gh-pages ブランチが作成されるので、ここに public の中身をぶちまける
 
 ~~subtree, よくわからんので後で調べる~~
 
-~~~bash
+```bash
 git checkout master
 git subtree add --prefix=public git@github.com:[username]/YOURSITE.git gh-pages --squash
 git subtree pull --prefix=public git@github.com:[username]/YOURSITE.git gh-pages
-~~~
+```
 
+正常にできたら`hugo`で生成、普通に commit、push した後
 
-正常にできたら`hugo`で生成、普通にcommit、pushした後
-
-~~~bash
+```bash
 git subtree push --prefix=public git@github.com:[username]/YOURSITE.git gh-pages
-~~~
+```
 
 で、おわり。
 
-## github pagesの設定
+## github pages の設定
 
 最後の設定
 
-ProjectページのSettingsから
+Project ページの Settings から
 
 <!-- ![](20220513003936.png) -->
+
 {{<img src="20220513003936.png">}}
 
-タブ中央のPagesへ行き、SourceのBranchをgh-pagesに、ディレクトリをrootにしてSaveする。
+タブ中央の Pages へ行き、Source の Branch を gh-pages に、ディレクトリを root にして Save する。
 
 <!-- ![](20220513004308.png)   -->
+
 {{<img src="20220513004308.png">}}
 かんた～ん
 
-記事更新したい時はstage, commit, pushした後buildしてsubtree pushする
+記事更新したい時は stage, commit, push した後 build して subtree push する
 
 めんどくせ～からバッチファイルとか作ったほうが良いかも
-
 
 EOF
