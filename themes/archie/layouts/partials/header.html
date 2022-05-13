@@ -61,5 +61,11 @@
 	{{- end }}
 	{{- end }}
 
+	{{ $gtag := resources.GetRemote "https://www.googletagmanager.com/gtag/js?id=G-T1BPEH4P5V" | resources.Minify | fingerprint }}
+	{{ $siteGtag := resources.Get "js/site-gtag.js" | minify | fingerprint }}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script src="{{ $gtag.Permalink }}"></script>
+	<script src="{{ $siteGtag.Permalink }}"></script>
+
 
 </head>
