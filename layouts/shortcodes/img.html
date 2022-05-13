@@ -1,0 +1,7 @@
+{{ $src := .Get "src" }}
+{{ $original := .Page.Resources.GetMatch $src }}
+{{ if $original }}
+	{{ $resized := $original.Resize "800x q70" }}
+	<img class="s_img_modal" src="{{ $resized.RelPermalink }}" data-original-link="{{ $original.RelPermalink }}" alt="{{ .Get "alt" }}">
+	
+{{ end }}

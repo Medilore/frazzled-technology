@@ -5,7 +5,7 @@ title = 'frazzled-technology'
 theme = "archie"
 HasCJKLanguage = true
 disableKinds = ["RSS"]
-pygmentsCodeFences = true
+pygmentsCodeFences = false
 Copyright = "frazzled-technology"
 
 [params]

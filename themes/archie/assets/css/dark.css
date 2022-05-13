@@ -20,7 +20,8 @@ body {
 hr {
   border-top: 3px dotted blue;
 }
-code {
+
+:not(pre) > code {
   /* background-color: lightblue; */
   background-color: #5b5850;
   /* color: black; */
@@ -28,6 +29,7 @@ code {
   padding: 0.2em 0.3em;
   margin: 0 0.3em
 }
+
 pre {
   background-color: #272822;
   line-height: 1.4;
