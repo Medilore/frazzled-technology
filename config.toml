@@ -8,6 +8,8 @@ disableKinds = ["RSS"]
 pygmentsCodeFences = false
 Copyright = "frazzled-technology"
 
+
 [params]
-mode = "dark"
-useCDN = false
+    mode = "dark"
+    useCDN = false
+    images = ["OGP.png"]
