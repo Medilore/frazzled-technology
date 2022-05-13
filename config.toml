@@ -10,3 +10,4 @@ Copyright = "frazzled-technology"
 
 [params]
 mode = "dark"
+useCDN = false
