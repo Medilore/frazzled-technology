@@ -31,9 +31,7 @@ Windows向けです。
 [Hugo Themes](https://themes.gohugo.io/)から好きなthemeを選び、
 zipでダウンロードしてきて`/themes`にぶちこんで終わり。
 
-テーマのカスタマイズ等はサイトディレクトリの/layoutsフォルダへheader.html等を入れてthemeのファイルを上書きするらしい。
-
-
+git cloneでも大丈夫
 
 ## 自分用にconfigをいじる
 
@@ -58,7 +56,7 @@ mode = "dark"
 
 ## 記事をつくる
 
-`hugo new post/HOGE.md`で記事作成。`content/post/HOGE.md`に生成される。
+`hugo new post/HOGE.md`で記事作成。`/content/post/HOGE.md`に生成される。
 
 あとはmarkdownをガリガリ書くだけ
 

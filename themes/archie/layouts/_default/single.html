@@ -30,6 +30,20 @@
 		</div>
 	</article>
 </main>
+
+{{ $prismOkaidiacss:= resources.Get "css/prism-okaidia.css" | minify | fingerprint }}
+{{ $prismcss:= resources.Get "css/prism.css" | minify | fingerprint }}
+{{ $modalcss := resources.Get "css/s-img-modal.css" | minify | fingerprint }}
+
+{{ $prismjs := resources.Get "js/prism.js" | minify | fingerprint }}
+{{ $modaljs := resources.Get "js/s-img-modal.js" | minify | fingerprint }}
+
+{{ $concatcssStyle := slice $prismOkaidiacss $prismcss $modalcss | resources.Concat "bundle.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $concatcssStyle.Permalink }}">
+
+{{ $concatjsStyle := slice $prismjs $modaljs | resources.Concat "bundle.js" | minify | fingerprint }}
+<script src="{{ $concatjsStyle.Permalink }}"></script>
+
 {{ end }}
 
 
