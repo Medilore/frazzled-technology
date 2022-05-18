@@ -1,6 +1,7 @@
 /* fira-sans-regular - latin */
 @font-face {
     font-family: "Fira Sans";
+    font-stretch: semi-expanded;
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/fira-sans-v10-latin-regular.eot"); /* IE9 Compat Modes */
@@ -21,6 +22,7 @@
 /* roboto-mono-regular - latin */
 @font-face {
     font-family: "Roboto Mono";
+    font-stretch: semi-expanded;
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/roboto-mono-v12-latin-regular.eot"); /* IE9 Compat Modes */
@@ -40,6 +42,7 @@
 /* ibm-plex-mono-500italic - latin */
 @font-face {
     font-family: "IBM Plex Mono";
+    font-stretch: semi-expanded;
     font-style: italic;
     font-weight: 500;
     src: url("../fonts/ibm-plex-mono-v6-latin-500italic.eot"); /* IE9 Compat Modes */
