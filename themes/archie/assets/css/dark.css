@@ -25,9 +25,12 @@ hr {
     /* background-color: lightblue; */
     background-color: #5b5850;
     /* color: black; */
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.2em 0.3em;
     margin: 0 0.3em;
+
+    font-family: "-apple-system","BlinkMacSystemFont","Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+
 }
 
 pre {
@@ -40,10 +43,10 @@ pre {
 blockquote {
     border-color: blue;
     border-left: 3px solid var(--bordercl);
-    color: #d8d8d8;
+    color: #f5f5f5;
     margin: 1em 1em 1em 0em;
     padding: 0.5em 0.5em 0.5em 0.8em;
-    background-color: #272822;
+    background-color: #262722;
 }
 
 h1,
@@ -53,6 +56,7 @@ h4,
 h5,
 h6 {
     color: #ddd;
+
 }
 h1::before {
     color: var(--darkMaincolor);
@@ -78,6 +82,18 @@ h6::before {
     color: var(--darkMaincolor);
     content: "###### ";
 }
+
+:not(.list-item) > h1 {
+    font-size: xx-large;
+}
+
+h2,h3,h4,h5,h6 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+}
+
+
+
 
 a {
     border-bottom: 2px solid var(--darkMaincolor);
@@ -168,4 +184,21 @@ a:hover {
     content: "Markdown";
     background: royalblue;
     color: whitesmoke;
+}
+
+ul {
+    background-color: #262722;
+    padding: 0.8em 0.8em 0.8em 1.4em;
+}
+
+ul li {
+    padding: 0.2em
+}
+
+ul>li::before {
+    color: var(--darkMaincolor);
+}
+
+ul li {
+    text-indent: -1.4ch;
 }
