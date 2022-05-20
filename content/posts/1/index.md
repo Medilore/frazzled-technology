@@ -67,7 +67,7 @@ frontmatter をいじりたかったら`/archetypes/default.md`をいじろう�
 
 **が、**
 
-俺は github pages で公開したかったので、ちょっと回り道をする。
+私は github pages で公開したかったので、ちょっと回り道をする。
 
 ### gh-pages ブランチを作成
 
@@ -104,15 +104,12 @@ git subtree push --prefix=public git@github.com:[username]/YOURSITE.git gh-pages
 
 Project ページの Settings から
 
-<!-- ![](20220513003936.png) -->
-
 {{<img src="20220513003936.png">}}
 
 タブ中央の Pages へ行き、Source の Branch を gh-pages に、ディレクトリを root にして Save する。
 
-<!-- ![](20220513004308.png)   -->
-
 {{<img src="20220513004308.png">}}
+
 かんた～ん
 
 記事更新したい時は stage, commit, push した後 build して subtree push する
